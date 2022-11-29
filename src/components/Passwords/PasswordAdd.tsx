@@ -73,7 +73,7 @@ const PasswordAdd = () => {
               key="text"
               margin="dense"
               id="text"
-              label="Text"
+              label="Password"
               type="text"
               fullWidth
               variant="standard"

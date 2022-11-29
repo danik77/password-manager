@@ -26,10 +26,9 @@ const UserRegister = () => {
 
     if (users.find((i) => i.login === userData.login)) {
       alert("User already exist");
+      setUserData(initialUserData);
       return;
     }
-
-    //import sha256 from 'crypto-js/sha256';
 
     //create id from current timestamp
     const id = Date.now();
@@ -56,6 +55,7 @@ const UserRegister = () => {
           name="login"
           onChange={onChange}
           required={true}
+          value={userData.login}
         />
         <TextField
           key="password"
@@ -68,6 +68,7 @@ const UserRegister = () => {
           name="password"
           onChange={onChange}
           required={true}
+          value={userData.password}
         />
         <Button  variant="contained" type="submit">Register</Button>
       </Box>

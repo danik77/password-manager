@@ -30,6 +30,7 @@ const UserRegister = () => {
       dispatch(loginUser(loggedUser));
     } else {
       alert("Login or password is wrong");
+      setUserData(initialUserData);
     }
 
     setUserData(initialUserData);
@@ -52,7 +53,7 @@ const UserRegister = () => {
           variant="standard"
           name="login"
           onChange={onChange}
-          defaultValue={userData.login}
+          value={userData.login}
           required={true}
         />
         <TextField
@@ -65,7 +66,7 @@ const UserRegister = () => {
           variant="standard"
           name="password"
           onChange={onChange}
-          defaultValue={userData.password}
+          value={userData.password}
           required={true}
         />
         <Button  variant="contained" type="submit">Login</Button>

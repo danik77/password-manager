@@ -12,10 +12,14 @@ const Dashboard = () => {
 	return (
 		<div className="App">
 			{ !authUser && (
-				<Typography variant="h5" component="h5">
-					You must <Link to={ROUTES.REGISTER}>register</Link> or{" "}
-					<Link to={ROUTES.LOGIN}>login</Link>
+				<>
+				<Typography variant="h3" component="h3" mb={2}>
+					Password Manager
 				</Typography>
+				<Typography variant="h5" component="h5">
+					You must <Link to={ROUTES.REGISTER}>register</Link> or <Link to={ROUTES.LOGIN}>login</Link>
+				</Typography>
+				</>
 			)}
 			{ authUser && (
 				<Container> 

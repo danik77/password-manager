@@ -33,7 +33,7 @@ const PasswordList = () => {
           <TableBody>
             {passwords &&
               passwords.map((password: Password) => (
-                <PasswordListItem password={password} />
+                <PasswordListItem key={password.id} password={password} />
               ))}
           </TableBody>
         </Table>
